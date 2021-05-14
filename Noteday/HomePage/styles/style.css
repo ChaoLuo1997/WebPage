@@ -1,0 +1,43 @@
+body {
+	font-family: "Helvetica Neue", "Open Sans", sans-serif;
+	font-weight: 400;
+	text-align: center;
+	color: #1D1D1D;
+	background-color: #FFFFFF;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+	position: relative;
+	overflow: hidden;
+}
+
+.appstore {
+	width: 200px;
+}
+
+.preview {
+	top: 44px;
+}
+
+.screenshot {
+	width: 300px;
+}
+
+.footer {
+	position: relative;
+	width: 100%;
+}
+
+.footer p {
+	font-size: small;
+	color: #939393;
+}
+
+.footer a {
+	font-size: small;
+    color: #515154;
+    text-decoration: none;
+}
