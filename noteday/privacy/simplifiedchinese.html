@@ -1,671 +1,163 @@
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Noteday 隐私政策</title><style>
-/* cspell:disable-file */
-/* webkit printing magic: print all background colors */
-html {
-	-webkit-print-color-adjust: exact;
-}
-* {
-	box-sizing: border-box;
-	-webkit-print-color-adjust: exact;
-}
-
-html,
-body {
-	margin: 0;
-	padding: 0;
-}
-@media only screen {
-	body {
-		margin: 2em auto;
-		max-width: 900px;
-		color: rgb(55, 53, 47);
-	}
-}
-
-body {
-	line-height: 1.5;
-	white-space: pre-wrap;
-}
-
-a,
-a.visited {
-	color: inherit;
-	text-decoration: underline;
-}
-
-.pdf-relative-link-path {
-	font-size: 80%;
-	color: #444;
-}
-
-h1,
-h2,
-h3 {
-	letter-spacing: -0.01em;
-	line-height: 1.2;
-	font-weight: 600;
-	margin-bottom: 0;
-}
-
-.page-title {
-	font-size: 2.5rem;
-	font-weight: 700;
-	margin-top: 0;
-	margin-bottom: 0.75em;
-}
-
-h1 {
-	font-size: 1.875rem;
-	margin-top: 1.875rem;
-}
-
-h2 {
-	font-size: 1.5rem;
-	margin-top: 1.5rem;
-}
-
-h3 {
-	font-size: 1.25rem;
-	margin-top: 1.25rem;
-}
-
-.source {
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	padding: 1.5em;
-	word-break: break-all;
-}
-
-.callout {
-	border-radius: 3px;
-	padding: 1rem;
-}
-
-figure {
-	margin: 1.25em 0;
-	page-break-inside: avoid;
-}
-
-figcaption {
-	opacity: 0.5;
-	font-size: 85%;
-	margin-top: 0.5em;
-}
-
-mark {
-	background-color: transparent;
-}
-
-.indented {
-	padding-left: 1.5em;
-}
-
-hr {
-	background: transparent;
-	display: block;
-	width: 100%;
-	height: 1px;
-	visibility: visible;
-	border: none;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-}
-
-img {
-	max-width: 100%;
-}
-
-@media only print {
-	img {
-		max-height: 100vh;
-		object-fit: contain;
-	}
-}
-
-@page {
-	margin: 1in;
-}
-
-.collection-content {
-	font-size: 0.875rem;
-}
-
-.column-list {
-	display: flex;
-	justify-content: space-between;
-}
-
-.column {
-	padding: 0 1em;
-}
-
-.column:first-child {
-	padding-left: 0;
-}
-
-.column:last-child {
-	padding-right: 0;
-}
-
-.table_of_contents-item {
-	display: block;
-	font-size: 0.875rem;
-	line-height: 1.3;
-	padding: 0.125rem;
-}
-
-.table_of_contents-indent-1 {
-	margin-left: 1.5rem;
-}
-
-.table_of_contents-indent-2 {
-	margin-left: 3rem;
-}
-
-.table_of_contents-indent-3 {
-	margin-left: 4.5rem;
-}
-
-.table_of_contents-link {
-	text-decoration: none;
-	opacity: 0.7;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-}
-
-table,
-th,
-td {
-	border: 1px solid rgba(55, 53, 47, 0.09);
-	border-collapse: collapse;
-}
-
-table {
-	border-left: none;
-	border-right: none;
-}
-
-th,
-td {
-	font-weight: normal;
-	padding: 0.25em 0.5em;
-	line-height: 1.5;
-	min-height: 1.5em;
-	text-align: left;
-}
-
-th {
-	color: rgba(55, 53, 47, 0.6);
-}
-
-ol,
-ul {
-	margin: 0;
-	margin-block-start: 0.6em;
-	margin-block-end: 0.6em;
-}
-
-li > ol:first-child,
-li > ul:first-child {
-	margin-block-start: 0.6em;
-}
-
-ul > li {
-	list-style: disc;
-}
-
-ul.to-do-list {
-	text-indent: -1.7em;
-}
-
-ul.to-do-list > li {
-	list-style: none;
-}
-
-.to-do-children-checked {
-	text-decoration: line-through;
-	opacity: 0.375;
-}
-
-ul.toggle > li {
-	list-style: none;
-}
-
-ul {
-	padding-inline-start: 1.7em;
-}
-
-ul > li {
-	padding-left: 0.1em;
-}
-
-ol {
-	padding-inline-start: 1.6em;
-}
-
-ol > li {
-	padding-left: 0.2em;
-}
-
-.mono ol {
-	padding-inline-start: 2em;
-}
-
-.mono ol > li {
-	text-indent: -0.4em;
-}
-
-.toggle {
-	padding-inline-start: 0em;
-	list-style-type: none;
-}
-
-/* Indent toggle children */
-.toggle > li > details {
-	padding-left: 1.7em;
-}
-
-.toggle > li > details > summary {
-	margin-left: -1.1em;
-}
-
-.selected-value {
-	display: inline-block;
-	padding: 0 0.5em;
-	background: rgba(206, 205, 202, 0.5);
-	border-radius: 3px;
-	margin-right: 0.5em;
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
-	white-space: nowrap;
-}
-
-.collection-title {
-	display: inline-block;
-	margin-right: 1em;
-}
-
-.simple-table {
-	margin-top: 1em;
-	font-size: 0.875rem;
-	empty-cells: show;
-}
-.simple-table td {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table th {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table-header-color {
-	background: rgb(247, 246, 243);
-	color: black;
-}
-.simple-table-header {
-	font-weight: 500;
-}
-
-time {
-	opacity: 0.5;
-}
-
-.icon {
-	display: inline-block;
-	max-width: 1.2em;
-	max-height: 1.2em;
-	text-decoration: none;
-	vertical-align: text-bottom;
-	margin-right: 0.5em;
-}
-
-img.icon {
-	border-radius: 3px;
-}
-
-.user-icon {
-	width: 1.5em;
-	height: 1.5em;
-	border-radius: 100%;
-	margin-right: 0.5rem;
-}
-
-.user-icon-inner {
-	font-size: 0.8em;
-}
-
-.text-icon {
-	border: 1px solid #000;
-	text-align: center;
-}
-
-.page-cover-image {
-	display: block;
-	object-fit: cover;
-	width: 100%;
-	max-height: 30vh;
-}
-
-.page-header-icon {
-	font-size: 3rem;
-	margin-bottom: 1rem;
-}
-
-.page-header-icon-with-cover {
-	margin-top: -0.72em;
-	margin-left: 0.07em;
-}
-
-.page-header-icon img {
-	border-radius: 3px;
-}
-
-.link-to-page {
-	margin: 1em 0;
-	padding: 0;
-	border: none;
-	font-weight: 500;
-}
-
-p > .user {
-	opacity: 0.5;
-}
-
-td > .user,
-td > time {
-	white-space: nowrap;
-}
-
-input[type="checkbox"] {
-	transform: scale(1.5);
-	margin-right: 0.6em;
-	vertical-align: middle;
-}
-
-p {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-}
-
-.image {
-	border: none;
-	margin: 1.5em 0;
-	padding: 0;
-	border-radius: 0;
-	text-align: center;
-}
-
-.code,
-code {
-	background: rgba(135, 131, 120, 0.15);
-	border-radius: 3px;
-	padding: 0.2em 0.4em;
-	border-radius: 3px;
-	font-size: 85%;
-	tab-size: 2;
-}
-
-code {
-	color: #eb5757;
-}
-
-.code {
-	padding: 1.5em 1em;
-}
-
-.code-wrap {
-	white-space: pre-wrap;
-	word-break: break-all;
-}
-
-.code > code {
-	background: none;
-	padding: 0;
-	font-size: 100%;
-	color: inherit;
-}
-
-blockquote {
-	font-size: 1.25em;
-	margin: 1em 0;
-	padding-left: 1em;
-	border-left: 3px solid rgb(55, 53, 47);
-}
-
-.bookmark {
-	text-decoration: none;
-	max-height: 8em;
-	padding: 0;
-	display: flex;
-	width: 100%;
-	align-items: stretch;
-}
-
-.bookmark-title {
-	font-size: 0.85em;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	height: 1.75em;
-	white-space: nowrap;
-}
-
-.bookmark-text {
-	display: flex;
-	flex-direction: column;
-}
-
-.bookmark-info {
-	flex: 4 1 180px;
-	padding: 12px 14px 14px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.bookmark-image {
-	width: 33%;
-	flex: 1 1 180px;
-	display: block;
-	position: relative;
-	object-fit: cover;
-	border-radius: 1px;
-}
-
-.bookmark-description {
-	color: rgba(55, 53, 47, 0.6);
-	font-size: 0.75em;
-	overflow: hidden;
-	max-height: 4.5em;
-	word-break: break-word;
-}
-
-.bookmark-href {
-	font-size: 0.75em;
-	margin-top: 0.25em;
-}
-
-.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
-.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
-.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
-.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
-.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
-.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
-.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
-.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
-.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
-.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
-.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
-.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
-.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.highlight-default {
-	color: rgba(55, 53, 47, 1);
-}
-.highlight-gray {
-	color: rgba(120, 119, 116, 1);
-	fill: rgba(120, 119, 116, 1);
-}
-.highlight-brown {
-	color: rgba(159, 107, 83, 1);
-	fill: rgba(159, 107, 83, 1);
-}
-.highlight-orange {
-	color: rgba(217, 115, 13, 1);
-	fill: rgba(217, 115, 13, 1);
-}
-.highlight-yellow {
-	color: rgba(203, 145, 47, 1);
-	fill: rgba(203, 145, 47, 1);
-}
-.highlight-teal {
-	color: rgba(68, 131, 97, 1);
-	fill: rgba(68, 131, 97, 1);
-}
-.highlight-blue {
-	color: rgba(51, 126, 169, 1);
-	fill: rgba(51, 126, 169, 1);
-}
-.highlight-purple {
-	color: rgba(144, 101, 176, 1);
-	fill: rgba(144, 101, 176, 1);
-}
-.highlight-pink {
-	color: rgba(193, 76, 138, 1);
-	fill: rgba(193, 76, 138, 1);
-}
-.highlight-red {
-	color: rgba(212, 76, 71, 1);
-	fill: rgba(212, 76, 71, 1);
-}
-.highlight-gray_background {
-	background: rgba(241, 241, 239, 1);
-}
-.highlight-brown_background {
-	background: rgba(244, 238, 238, 1);
-}
-.highlight-orange_background {
-	background: rgba(251, 236, 221, 1);
-}
-.highlight-yellow_background {
-	background: rgba(251, 243, 219, 1);
-}
-.highlight-teal_background {
-	background: rgba(237, 243, 236, 1);
-}
-.highlight-blue_background {
-	background: rgba(231, 243, 248, 1);
-}
-.highlight-purple_background {
-	background: rgba(244, 240, 247, 0.8);
-}
-.highlight-pink_background {
-	background: rgba(249, 238, 243, 0.8);
-}
-.highlight-red_background {
-	background: rgba(253, 235, 236, 1);
-}
-.block-color-default {
-	color: inherit;
-	fill: inherit;
-}
-.block-color-gray {
-	color: rgba(120, 119, 116, 1);
-	fill: rgba(120, 119, 116, 1);
-}
-.block-color-brown {
-	color: rgba(159, 107, 83, 1);
-	fill: rgba(159, 107, 83, 1);
-}
-.block-color-orange {
-	color: rgba(217, 115, 13, 1);
-	fill: rgba(217, 115, 13, 1);
-}
-.block-color-yellow {
-	color: rgba(203, 145, 47, 1);
-	fill: rgba(203, 145, 47, 1);
-}
-.block-color-teal {
-	color: rgba(68, 131, 97, 1);
-	fill: rgba(68, 131, 97, 1);
-}
-.block-color-blue {
-	color: rgba(51, 126, 169, 1);
-	fill: rgba(51, 126, 169, 1);
-}
-.block-color-purple {
-	color: rgba(144, 101, 176, 1);
-	fill: rgba(144, 101, 176, 1);
-}
-.block-color-pink {
-	color: rgba(193, 76, 138, 1);
-	fill: rgba(193, 76, 138, 1);
-}
-.block-color-red {
-	color: rgba(212, 76, 71, 1);
-	fill: rgba(212, 76, 71, 1);
-}
-.block-color-gray_background {
-	background: rgba(241, 241, 239, 1);
-}
-.block-color-brown_background {
-	background: rgba(244, 238, 238, 1);
-}
-.block-color-orange_background {
-	background: rgba(251, 236, 221, 1);
-}
-.block-color-yellow_background {
-	background: rgba(251, 243, 219, 1);
-}
-.block-color-teal_background {
-	background: rgba(237, 243, 236, 1);
-}
-.block-color-blue_background {
-	background: rgba(231, 243, 248, 1);
-}
-.block-color-purple_background {
-	background: rgba(244, 240, 247, 0.8);
-}
-.block-color-pink_background {
-	background: rgba(249, 238, 243, 0.8);
-}
-.block-color-red_background {
-	background: rgba(253, 235, 236, 1);
-}
-.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
-.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
-.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
-.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
-.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
-.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
-.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
-.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
-.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
-.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
-
-.checkbox {
-	display: inline-flex;
-	vertical-align: text-bottom;
-	width: 16;
-	height: 16;
-	background-size: 16px;
-	margin-left: 2px;
-	margin-right: 5px;
-}
-
-.checkbox-on {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-
-.checkbox-off {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-	
-</style></head><body><article id="20e2b91d-db87-48bf-aaee-08463ec86358" class="page sans"><header><h1 class="page-title">Noteday 隐私政策</h1></header><div class="page-body"><p id="77a707d7-908d-4232-9ccb-7a1377a6a458" class="">我将 Noteday 应用程序构建为免费增值应用程序。本服务提供旨在按原样使用。</p><p id="0a389fd0-687f-4446-ae0c-9d5e494a0a86" class="">如果您选择使用 Noteday，此页面用于告知访问者有关我们收集、使用和披露个人信息的政策。</p><p id="c2d4dcc7-39ca-41e8-be85-2e27c769603a" class="">除非本隐私政策中另有定义，否则本隐私政策中使用的术语与我们的条款和条件具有相同的含义，可以在 Noteday 中访问这些条款和条件。</p><h2 id="ec76dc42-bca1-49b2-b780-d55303d6ca41" class="">信息收集与使用</h2><p id="11a227a6-da56-4ac0-a815-199a492f931e" class="">为了获得更好的体验，在使用 Noteday<strong> </strong>时，我可能会要求您向我提供某些个人身份信息，包括但不限于姓名，电子邮件。但是我所要求的信息将保留在您的设备上并按照本隐私政策的规定使用，我不会以任何方式收集这些信息。</p><h2 id="74bf200d-10a5-4c67-b83b-ccb1de1911a9" class="">日志数据</h2><p id="51a57475-64bd-4107-811f-47c89a1e0f3b" class="">我想通知您，每当您使用 Noteday<strong> </strong>时，如果出现错误，我都会通过第三方产品（称为第三方数据）在您的设备上收集数据和信息。</p><p id="d7d37f59-c31e-4202-a3a3-e7dd503a2fef" class="">此日志数据可能包含诸如您的设备 Internet 协议（“IP”）地址，设备名称，操作系统版本，使用 Noteday<strong> </strong>时的配置，使用使用 Noteday<strong> </strong>时的时间和日期以及其他统计信息等信息。</p><h2 id="c5d2e738-c330-4a20-a09b-d0d930c1fb17" class=""><strong>服务供应商</strong></h2><p id="011868c2-5ce5-4ea2-825e-a1c76849d3c9" class="">由于以下原因，我们可能会雇用第三方公司和个人：</p><ul id="cf046480-f444-4b23-bae9-9858c6842386" class="bulleted-list"><li style="list-style-type:disc">方便我们的服务。</li></ul><ul id="31a420c7-d2e0-448c-a85a-e1f6803c5db0" class="bulleted-list"><li style="list-style-type:disc">代表我们提供服务。</li></ul><ul id="0a1f6c62-c265-42c2-9a1d-3d9c8632104d" class="bulleted-list"><li style="list-style-type:disc">执行与服务相关的服务。</li></ul><ul id="28aba4d8-0a60-4e11-8d2c-78a977f4f4a4" class="bulleted-list"><li style="list-style-type:disc">协助我们分析我们的服务是如何被使用的。</li></ul><h2 id="5b65eea3-9a31-401e-ae6d-2a0a2b302680" class="">安全</h2><p id="fadff51d-2808-4eb4-a566-340a03c8daa4" class="">我非常重视您对我们提供个人信息的信任，因此我努力使用商业上可接受的方式来保护这些信息。但请记住，没有任何一种互联网传输方法或电子存储方法是 100% 安全和可靠的，我不能保证其绝对安全。</p><h2 id="78bc89d3-0526-4e1e-823f-d45ebf0eb1e9" class="">链接到其他网站</h2><p id="83ce1338-9353-4610-b42e-9a91c7d2f76f" class="">Noteday<strong> </strong>可能包含指向其他网站的链接。如果单击第三方链接，您将被定向到该站点。请注意，这些外部站点不是由我操作的。因此，我强烈建议您阅读这些网站的隐私政策。我无法控制任何第三方站点或服务的内容，隐私权政策或行为，也不承担任何责任。</p><h2 id="8ff757f3-50c6-4a5f-8ee3-d4462985b601" class="">儿童隐私</h2><p id="f3719c3a-4938-486b-b52e-d171a4f3cfd2" class="">这些服务不面向 10 岁以下的任何人。我不会故意收集 10 岁以下儿童的个人身份信息。如果我发现 10 岁以下儿童向我提供了个人信息，我会立即从我们的服务器中删除这些信息。如果您是父母或监护人，并且知道您的孩子向我们提供了个人信息，请与我联系，以便我能够采取必要的行动。</p><h2 id="9f463b9c-fd58-4500-a06b-f6bae7c1a46c" class="">本隐私政策的变更</h2><p id="8d28c5a6-1caf-4aa0-9bdd-5a5a3990e0b2" class="">我可能会不时更新我的隐私政策。因此，建议您定期查看此页面以进行任何更改。我会通过在此页面上发布新的隐私政策来通知您任何更改。这些更改在此页面上发布后立即生效。该政策自<strong> </strong>2021 年 05 月 01 日起生效。</p><h2 id="a9823c71-81f6-4146-b772-2c9955c68998" class="">联系我</h2><p id="34fbc8d1-945a-4cb1-b2d5-1ed74ad206ff" class="">如果您对我的隐私政策有任何疑问或建议，请随时通过 <a href="mailto:support@sixiluo.com">support@sixiluo.com</a> 与我联系。</p><p id="dc033a24-3b6f-4f4f-9011-49b47d9218fd" class="">
-</p><p id="57c3fc18-cde8-4997-becf-47b97d9b3c62" class=""><strong>本文件最后更新于 2023 年 02 月 11 日。</strong></p><p id="0bb9743e-39c7-49d7-b0a5-92d7c1c17b0c" class="">
-</p></div></article></body></html>
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="Noteday 隐私政策">
+    <title>Noteday 隐私政策</title>
+    <link rel="stylesheet" href="../styles/legal.css">
+    <link rel="icon" href="../images/favicon.ico">
+</head>
+<body>
+<main>
+    <header>
+        <h1>Noteday 隐私政策</h1>
+        <p class="meta">生效及最后更新日期：2026 年 8 月 14 日</p>
+        <p class="language"><a href="./english">English</a></p>
+        <p class="summary">本政策说明 Noteday 如何处理你的信息。简要而言：Noteday 无需注册账户，不包含广告追踪或第三方分析 SDK；你的事件数据默认保存在设备上，只有在你启用 iCloud 同步、共享事件或发送反馈时，相关数据才会按照你的选择离开设备。</p>
+    </header>
+
+    <section>
+        <h2>1. 适用范围与处理者</h2>
+        <p>本政策适用于 Noteday iOS 应用、相关小组件、反馈服务以及本政策页面。服务提供者及个人信息处理者为 App Store 产品页面所列的 Noteday 提供者（截至本政策更新日显示为“铧 杨”，以下简称“开发者”或“我们”）。</p>
+        <p>隐私问题、个人信息权利请求及投诉可发送至 <a href="mailto:support@sixiluo.com">support@sixiluo.com</a>。Apple、Cloudflare 和 Resend 对其自行决定目的和方式的处理活动，分别按照其隐私政策承担责任。</p>
+    </section>
+
+    <section>
+        <h2>2. 我们处理的信息</h2>
+
+        <h3>2.1 你创建或选择导入的内容</h3>
+        <p>Noteday 可处理你创建的事件标题、备注、日期与时间、重复规则、提醒设置、分类、颜色、表情，以及你选择的头像或壁纸。使用导入功能时，Noteday 会按照你的选择读取：</p>
+        <ul>
+            <li>日历：事件标题、日期与时间、重复信息、备注及地点文字，用于生成待导入事件；Noteday 不修改系统日历。</li>
+            <li>联系人：姓名、生日、农历生日及可用的缩略图，用于生成你确认导入的生日事件；Noteday 不修改系统联系人。</li>
+            <li>照片或文件：仅处理你通过系统选择器选中的图片，用作事件头像或壁纸。</li>
+        </ul>
+        <p>这些内容默认保存在你的设备及 App Group 容器中。若你开启 iCloud 同步，内容会上传至 Apple CloudKit；若你共享事件，所选事件及其关联图片会通过 Apple CloudKit 提供给你指定的参与者。</p>
+
+        <h3>2.2 设置、标识符和设备内日志</h3>
+        <p>Noteday 会在设备上保存外观、排序、提醒、同步状态、购买解锁状态等设置。Noteday 还会生成一个随机的诊断用户 ID，并通过 Apple iCloud 键值存储在使用同一 iCloud 账户的设备之间同步。该 ID 不是账户、登录凭据或 Apple ID，也不直接包含姓名、邮箱或设备序列号。</p>
+        <p>为排查故障，Noteday 会在设备本地生成滚动使用日志，其中可能包括会话元数据、App 版本、诊断用户 ID、页面导航、功能操作、状态和错误信息。日志不主动导出事件数据库、联系人、日历、照片或崩溃转储。日志会应用发布版隐私处理和长度限制，但自动处理无法保证识别用户在所有自由文本或系统错误信息中输入的全部个人信息。</p>
+
+        <h3>2.3 反馈信息</h3>
+        <p>当你主动发送反馈时，Noteday 会处理以下信息：</p>
+        <table>
+            <thead>
+                <tr><th>信息类别</th><th>是否必需</th><th>用途与去向</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>反馈分类和反馈正文</td><td>必需</td><td>用于接收、定位和回复问题；保存至 Cloudflare D1，并通过 Resend 发送至支持邮箱。</td></tr>
+                <tr><td>回复邮箱</td><td>选填</td><td>仅用于就该反馈与你联系；保存至 Cloudflare D1，并作为反馈邮件内容及回复地址。</td></tr>
+                <tr><td>诊断用户 ID</td><td>自动附加</td><td>用于关联同一 iCloud 用户提交的诊断信息；仅进入反馈通知邮件，不写入 Cloudflare D1。若你同时填写邮箱或在正文中提供身份信息，该 ID 可能在本次支持记录中与你关联。</td></tr>
+                <tr><td>App 名称、版本、Build，系统名称与版本，设备型号标识符，语言、地区和时区标识符</td><td>自动附加</td><td>用于复现环境和排查兼容性问题；保存至 Cloudflare D1，并进入反馈通知邮件。</td></tr>
+                <tr><td>连接 IP 和请求时间</td><td>网络传输产生</td><td>由 Cloudflare 用于网络传输、安全防护和短期限流；Noteday 不把 IP 写入反馈数据库。</td></tr>
+                <tr><td>诊断日志压缩包</td><td>选填，开关默认关闭</td><td>仅在你主动打开“附加使用日志”开关后导出并随反馈邮件发送；不写入 Cloudflare D1。</td></tr>
+            </tbody>
+        </table>
+        <p>如果日志导出失败，Noteday 会继续提交反馈正文而不附加日志。关闭日志开关不会影响你发送反馈或使用其他功能。</p>
+    </section>
+
+    <section>
+        <h2>3. 系统权限</h2>
+        <p>Noteday 仅在你使用相应功能时请求系统权限。你可以在系统“设置”中随时撤回权限，但相关功能可能因此不可用。</p>
+        <ul>
+            <li><strong>日历：</strong>读取你选择导入的日历事件。</li>
+            <li><strong>联系人：</strong>读取用于生日导入的联系人字段。</li>
+            <li><strong>照片：</strong>选择事件头像或壁纸。</li>
+            <li><strong>通知：</strong>在设备上发送你设置的事件提醒。</li>
+        </ul>
+        <p>系统选择器和权限由 Apple 提供。Noteday 不会获得你的 Apple ID 密码、支付卡信息，也不会获得 Face ID 或 Touch ID 的生物识别模板。</p>
+    </section>
+
+    <section>
+        <h2>4. iCloud 同步与事件共享</h2>
+        <p>iCloud 同步是可选择的功能。启用后，事件、分类、图片、提醒配置及相关偏好会由 Apple CloudKit 存储和同步。关闭同步会停止后续同步，但不一定自动删除此前已上传到 iCloud 的数据；你可以在 Noteday 或 Apple 的 iCloud 存储设置中删除相关数据。</p>
+        <p>共享事件仅向你指定的参与者开放，并使用 Apple 提供的共享界面和 CloudKit 权限。参与者可能查看共享事件的标题、日期、备注和关联图片。停止共享不能撤回参与者此前已经保存、截图或以其他方式复制的内容。</p>
+        <p>iCloud 和 App Store 服务由 Apple 提供并受 <a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a>及适用的 iCloud/App Store 条款约束。</p>
+    </section>
+
+    <section>
+        <h2>5. App 内购买</h2>
+        <p>Noteday 的 App 内购买由 Apple StoreKit 和 App Store 处理。Apple 负责付款、交易记录、退款和购买恢复。Noteday 仅接收完成授权所需的商品和交易验证结果，不接收或保存你的完整支付卡号、账单地址或政府身份证件。</p>
+    </section>
+
+    <section>
+        <h2>6. 处理目的与法律依据</h2>
+        <p>我们只为以下目的处理信息：提供你请求的事件记录、同步、共享、提醒、导入和购买功能；接收并处理反馈；保障服务安全、防止滥用；修复错误并改进 Noteday；履行法律义务。</p>
+        <p>根据适用法律，处理依据可能是履行你请求的服务、你的同意、维护服务安全与改进产品的合法利益，或履行法定义务。需要同意的处理可在系统设置、Noteday 功能开关或反馈操作中撤回；撤回不影响撤回前处理的合法性。</p>
+    </section>
+
+    <section>
+        <h2>7. 服务提供商与数据接收方</h2>
+        <table>
+            <thead>
+                <tr><th>接收方</th><th>处理内容和目的</th><th>联系与政策</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Apple 及适用地区的 iCloud/App Store 运营方</td><td>CloudKit 同步与共享、iCloud 键值存储、系统通知、App 内购买和支持邮箱。</td><td><a href="https://www.apple.com/legal/privacy/">Apple 隐私政策</a></td></tr>
+                <tr><td>Cloudflare, Inc.</td><td>托管反馈 API 和 D1 数据库，处理请求 IP、网络元数据、安全防护和限流。</td><td><a href="https://www.cloudflare.com/privacypolicy/">Cloudflare 隐私政策</a>；privacyquestions@cloudflare.com</td></tr>
+                <tr><td>Plus Five Five, Inc.（Resend）</td><td>将反馈通知及你选择附加的诊断日志发送至支持邮箱。</td><td><a href="https://resend.com/legal/privacy-policy">Resend 隐私政策</a>；support@resend.com</td></tr>
+            </tbody>
+        </table>
+        <p>我们要求受托服务提供商仅为约定目的处理数据，并提供不低于适用法律及本政策要求的保护。我们不会出售或出租你的个人信息，不会将其用于定向广告，也不使用第三方广告或分析 SDK 建立用户画像。</p>
+    </section>
+
+    <section>
+        <h2>8. 跨境处理</h2>
+        <p>Apple 会根据你的 Apple 账户地区和服务安排确定 iCloud、App Store 和邮件数据的处理地点。反馈服务使用的 Cloudflare 和 Resend 为美国公司，反馈信息可能在你所在国家或地区以外（包括美国）处理。</p>
+        <div class="notice">
+            <strong>中国大陆用户特别说明：</strong>在反馈页点击“发送”是你在阅读本政策后作出的单独、主动操作，表示你同意将本次反馈信息提供给上述境外接收方；如果你同时打开诊断日志开关，则也同意传输诊断日志。若你不同意跨境提供，请不要发送反馈，这不会影响 Noteday 的本地核心功能。你可以通过本政策所列邮箱向我们或相关接收方行使权利。
+        </div>
+        <p>在适用法律要求时，我们将采取合同、认证、评估或其他合法传输机制，并采取措施要求接收方达到适用的数据保护标准。</p>
+    </section>
+
+    <section>
+        <h2>9. 保存期限与删除</h2>
+        <ul>
+            <li><strong>设备数据：</strong>保存至你在 App 中删除、清除 App 数据或卸载 App。卸载前请自行确认是否需要备份。</li>
+            <li><strong>iCloud 数据：</strong>保存至你在 Noteday 或 iCloud 中删除，或按照 Apple 的保留规则处理。仅关闭同步不一定删除已有云端副本。</li>
+            <li><strong>共享数据：</strong>通常保存至共享所有者停止共享或删除事件；参与者自行复制的内容不受我们控制。</li>
+            <li><strong>反馈记录：</strong>Cloudflare D1 中的反馈记录，以及 Resend 和支持邮箱中的反馈邮件及可选诊断附件，通常在收到后保存不超过 24 个月，并可在问题解决后提前删除或去标识化。诊断附件不写入 D1。</li>
+            <li><strong>安全与服务日志：</strong>由服务提供商按照其服务规则保留最短必要时间。Cloudflare 限流键的应用级窗口当前为 60 秒。</li>
+        </ul>
+        <p>如法律义务、争议处理、安全调查或防止滥用确有需要，相关记录可能保留更长时间；保留理由消失后将删除或去标识化。删除请求完成后，备份副本可能在服务提供商的正常轮换周期内继续存在，但不会用于其他目的。</p>
+    </section>
+
+    <section>
+        <h2>10. 你的选择和权利</h2>
+        <p>根据你所在地区的法律，你可能有权查询、复制、更正、删除或限制处理个人信息，撤回同意、反对处理、要求数据可携带，以及向监管机构投诉。</p>
+        <ul>
+            <li>你可以在 Noteday 中编辑或删除事件，在系统设置中撤回日历、联系人、照片或通知权限，并在 Noteday 设置中关闭 iCloud 同步。</li>
+            <li>你可以保持诊断日志开关关闭；已经发送后，可申请删除相应反馈和附件。</li>
+            <li>申请访问或删除反馈时，请发送邮件至 <a href="mailto:support@sixiluo.com">support@sixiluo.com</a>，并尽可能提供反馈编号和提交时间。为防止误删，我们可能要求验证与请求相关的信息。</li>
+        </ul>
+        <p>Noteday 没有自建账户，我们不会要求你提供账户密码或完整支付信息来验证隐私请求。对于仅存在于你的设备、私人 iCloud 数据库或其他参与者设备中的内容，我们可能无法直接定位或删除，并会向你说明可用的设备或 Apple 管理方式。</p>
+    </section>
+
+    <section>
+        <h2>11. 安全</h2>
+        <p>我们采用与风险相称的措施，包括 HTTPS 传输、系统级数据保护、服务端字段与大小校验、访问限制以及将诊断附件排除在反馈数据库之外。任何互联网传输或存储方式都无法保证绝对安全；请不要在反馈或诊断日志中主动填写密码、完整支付卡号、政府证件号码、医疗健康信息或其他不必要的敏感信息。</p>
+    </section>
+
+    <section>
+        <h2>12. 未成年人</h2>
+        <p>Noteday 不以未成年人为定向营销对象，也不会故意要求儿童提供个人信息。中国大陆不满 14 周岁的用户应由父母或其他监护人指导使用，且发送反馈或进行其他需要同意的信息处理前应取得监护人同意；其他地区适用当地规定的年龄门槛。监护人认为儿童未经适当同意提交了信息时，可联系我们申请删除。</p>
+    </section>
+
+    <section>
+        <h2>13. 政策变更</h2>
+        <p>我们可能因功能、服务提供商或法律要求变化而更新本政策，并在页面顶部更新日期。涉及处理目的、信息类别、接收方或用户权利的重大变化时，我们会在 App 内或通过其他适当方式提供显著通知，并在法律要求时重新取得同意。</p>
+    </section>
+
+    <section>
+        <h2>14. 联系我们</h2>
+        <p>如对本政策有疑问，或需要行使隐私权利，请联系：<a href="mailto:support@sixiluo.com">support@sixiluo.com</a>。</p>
+    </section>
+
+    <footer>
+        <p>Noteday · <a href="../terms-of-service-simplifiedchinese">服务条款</a></p>
+    </footer>
+</main>
+</body>
+</html>
