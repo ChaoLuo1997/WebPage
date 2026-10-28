@@ -1,44 +1,240 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-    <title>Noteday</title>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#f3f6f9" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+    <title>Noteday – Countdowns, Anniversaries &amp; Birthdays</title>
+    <meta name="description" content="Noteday keeps track of every day that matters: countdowns, anniversaries and birthdays, with reminders, widgets and iCloud sync.">
     <meta name="apple-itunes-app" content="app-id=1545736323">
-    <link rel="stylesheet" type="text/css" href="./styles/style.css">
-    <link rel="shortcut icon" href="./images/favicon.ico">
-
+    <link rel="canonical" href="https://app.sixiluo.com/noteday/">
+    <link rel="alternate" hreflang="en" href="https://app.sixiluo.com/noteday/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://app.sixiluo.com/noteday/zh/">
+    <link rel="alternate" hreflang="x-default" href="https://app.sixiluo.com/noteday/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Noteday – Record every day worth remembering">
+    <meta property="og:description" content="Countdowns, anniversaries and birthdays, with reminders, widgets and iCloud sync.">
+    <meta property="og:image" content="https://app.sixiluo.com/noteday/images/og.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="./images/favicon.ico">
+    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+    <link rel="stylesheet" href="./styles/site.css">
+    <script>
+        // First visit from a Chinese-language browser: go to the Chinese page.
+        (function () {
+            try {
+                var saved = localStorage.getItem("noteday-lang");
+                var lang = (navigator.languages && navigator.languages[0]) || navigator.language || "";
+                if (!saved && /^zh/i.test(lang)) location.replace("./zh/");
+            } catch (e) {}
+        })();
+    </script>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="nav">
-
+    <header class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="./">
+                <img src="./images/icon-blue.png" alt="">
+                Noteday
+            </a>
+            <nav class="nav-links">
+                <a class="hide-sm" href="#features">Features</a>
+                <a class="hide-sm" href="#pro">Pro</a>
+                <a class="lang" href="./zh/" data-lang="zh" hreflang="zh-Hans" lang="zh-Hans">中文</a>
+                <a class="get" href="https://apps.apple.com/app/id1545736323" target="_blank" rel="noopener">Download</a>
+            </nav>
         </div>
-        <div class="main">
-            <div class="content">
-                <h1>Noteday</h1>
-                <h3>记录每个值得记录的日子</h3>
-                <a class="download" href="https://itunes.apple.com/app/id1545736323" target="_blank">
-                    <img class="appstore" src="./images/download.png">
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="blob blue"></div>
+            <div class="blob pink"></div>
+            <div class="blob green"></div>
+            <div class="container">
+                <img class="app-icon" src="./images/icon-blue.png" alt="Noteday app icon">
+                <p class="kicker">Countdowns · Anniversaries · Birthdays</p>
+                <h1>Record every day worth remembering</h1>
+                <p class="lead">Just pick a date. Noteday shows how many days are left or how long it has been, and reminds you before it arrives.</p>
+                <a class="badge" href="https://apps.apple.com/app/id1545736323" target="_blank" rel="noopener">
+                    <img src="./images/badge-en.svg" alt="Download on the App Store">
                 </a>
-                <div class="preview">
-                    <img class="screenshot" src="./images/1.png">
-                    <img class="screenshot" src="./images/2.png">
-                    <img class="screenshot" src="./images/3.png">
+                <div class="hero-visual">
+                    <span class="chip c1" aria-hidden="true">😘</span>
+                    <span class="chip c2" aria-hidden="true">🌍</span>
+                    <span class="chip c3" aria-hidden="true">📚</span>
+                    <span class="chip c4" aria-hidden="true">🥳</span>
+                    <span class="chip c5" aria-hidden="true">🎂</span>
+                    <div class="phone-wrap"><img class="phone" src="./images/en/home.png" width="720" height="1459" alt="Noteday home screen with a list of colorful events"></div>
                 </div>
             </div>
-        </div>
-        <div class="footer">
-            <div>
-                <p>Copryright © 2021 ©️ Sixi Luo. All rights reserved.</p>
+        </section>
+
+        <section class="section" id="features">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow">Features</p>
+                    <h2>Simple to use. Lovely to look at.</h2>
+                    <p>Everything you need to keep the days that matter close.</p>
+                </div>
+
+                <div class="bento">
+                    <article class="card span-4 split reveal">
+                        <div class="copy">
+                            <h3>Counts up and down, automatically</h3>
+                            <p>No need to choose between a countdown and a count-up. Pick a date and Noteday does the rest.</p>
+                            <ul>
+                                <li>Gregorian and Chinese lunar calendars</li>
+                                <li>Repeat daily, weekly, monthly, yearly or by weekday</li>
+                                <li>Add records with text and photos</li>
+                            </ul>
+                        </div>
+                        <img class="shot" src="./images/en/detail.png" width="720" height="1459" alt="Event details for My Birthday, in 186 days" loading="lazy">
+                    </article>
+
+                    <article class="card span-2 reveal">
+                        <h3>Never miss a day</h3>
+                        <p>Daily, advance and location reminders, plus Live Activities on the Lock Screen and in the Dynamic Island.</p>
+                        <div class="mock" aria-hidden="true">
+                            <div class="island"><span class="em">📚</span><span>Final Exam</span><span class="t">00:59:12</span></div>
+                            <div class="notice">
+                                <img src="./images/icon-blue.png" alt="">
+                                <div><b>My Birthday</b><span>Is tomorrow. Get ready to celebrate!</span></div>
+                            </div>
+                            <div class="notice">
+                                <img src="./images/icon-blue.png" alt="">
+                                <div><b>New Year</b><span>In 7 days</span></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card span-2 reveal">
+                        <h3>Widgets for every screen</h3>
+                        <p>A single event, an event list, or how far through the day, week, month and year you are.</p>
+                        <div class="mock widgets" aria-hidden="true">
+                            <div class="widget">
+                                <span class="w-emoji">😘</span>
+                                <span class="w-title">Together</span>
+                                <span class="w-sub">Past</span>
+                                <span class="w-num">1438<small>d</small></span>
+                            </div>
+                            <div class="widget">
+                                <span class="w-label">Today is</span>
+                                <span class="w-day">Tuesday</span>
+                                <span class="w-sub">Oct 27, 2026</span>
+                                <div class="w-row"><span>Day</span><span>65%</span></div>
+                                <div class="bar"><i></i></div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card span-4 split reveal">
+                        <div class="copy">
+                            <h3>Past and future at a glance</h3>
+                            <p>The Timeline walks through all your events month by month. The Date Calculator counts the days between any two dates.</p>
+                        </div>
+                        <img class="shot" src="./images/en/timeline.png" width="720" height="1459" alt="Timeline of events grouped by month" loading="lazy">
+                    </article>
+
+                    <article class="card span-2 reveal">
+                        <div class="mock icons" style="margin-top:0" aria-hidden="true">
+                            <img src="./images/icon-blue.png" alt="">
+                            <img src="./images/icon-green.png" alt="">
+                            <img src="./images/icon-orange.png" alt="">
+                            <img src="./images/icon-purple.png" alt="">
+                            <img src="./images/icon-pink.png" alt="">
+                        </div>
+                        <h3 style="margin-top:24px">Your days, your style</h3>
+                        <p>Categories with their own icons and colors, avatars, backgrounds, list styles, app icons and Dark Mode.</p>
+                        <div class="swatches" aria-hidden="true">
+                            <i style="background:var(--c-pink)"></i>
+                            <i style="background:var(--c-blue)"></i>
+                            <i style="background:var(--c-purple)"></i>
+                            <i style="background:var(--c-green)"></i>
+                            <i style="background:var(--c-orange)"></i>
+                        </div>
+                    </article>
+
+                    <article class="card span-2 reveal">
+                        <div class="big-glyph" aria-hidden="true">☁️</div>
+                        <h3>Import, sync and share</h3>
+                        <p>Bring in birthdays from Contacts and events from Calendar in one tap, sync between iPhone and iPad with iCloud, and share events with family and friends.</p>
+                    </article>
+
+                    <article class="card span-2 reveal">
+                        <div class="big-glyph" aria-hidden="true">🔒</div>
+                        <h3>Private by design</h3>
+                        <p>No sign-up or login. Your data stays on your device and in your own iCloud. Back up locally or export as CSV and images anytime.</p>
+                    </article>
+                </div>
             </div>
-            <div>
-                <a href="mailto:support@sixiluo.com">联系我</a>
-                <a href="https://app.sixiluo.com/noteday/privacy/simplifiedchinese">隐私政策</a>
+        </section>
+
+        <section class="section" id="pro">
+            <div class="container">
+                <div class="section-head reveal">
+                    <p class="eyebrow">Free and Noteday Pro</p>
+                    <h2>Free to start. Pro forever.</h2>
+                    <p>Noteday Pro is a one-time purchase that's yours forever.</p>
+                </div>
+                <div class="plans">
+                    <article class="card plan reveal">
+                        <h3>Free</h3>
+                        <p class="price">Free download</p>
+                        <ul>
+                            <li>Up to 5 events</li>
+                            <li>Reminders</li>
+                            <li>Single-event widgets</li>
+                            <li>Local backup and export</li>
+                        </ul>
+                    </article>
+                    <article class="card plan pro reveal">
+                        <h3>Noteday Pro</h3>
+                        <p class="price">One-time purchase</p>
+                        <ul>
+                            <li>Unlimited events</li>
+                            <li>iCloud sync and event sharing</li>
+                            <li>Calendar and Contacts birthday import</li>
+                            <li>Custom images and solid color backgrounds</li>
+                            <li>Event list and all time-progress widgets</li>
+                            <li>No watermark on shared images</li>
+                        </ul>
+                    </article>
+                </div>
             </div>
+        </section>
+
+        <section class="container">
+            <div class="cta reveal">
+                <div class="blob blue"></div>
+                <div class="blob pink"></div>
+                <img class="app-icon" src="./images/icon-blue.png" alt="">
+                <h2>Some days are worth remembering</h2>
+                <p>Birthdays, anniversaries, the day you met, a trip you can't wait for.</p>
+                <a class="badge" href="https://apps.apple.com/app/id1545736323" target="_blank" rel="noopener">
+                    <img src="./images/badge-en.svg" alt="Download on the App Store">
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span>© 2021–2026 Sixi Luo. All rights reserved.</span>
+            <nav>
+                <a href="mailto:support@sixiluo.com">Contact</a>
+                <a href="./privacy/english">Privacy Policy</a>
+                <a href="./terms-of-service">Terms of Use</a>
+                <a href="./zh/" data-lang="zh" lang="zh-Hans">简体中文</a>
+            </nav>
         </div>
-    </div>
+    </footer>
+
+    <script src="./scripts/site.js"></script>
 </body>
 
 </html>
