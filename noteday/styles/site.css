@@ -494,6 +494,10 @@ a {
     grid-column: span 4;
 }
 
+.span-6 {
+    grid-column: span 6;
+}
+
 .card.split {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -586,9 +590,24 @@ a {
     border-radius: 9px;
 }
 
-.notice b {
-    display: block;
+.notice > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.notice .n-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin: 0;
     font-size: 14px;
+    color: var(--text);
+}
+
+.notice time {
+    font-size: 12px;
+    color: var(--text-3);
+    white-space: nowrap;
 }
 
 .notice span {
@@ -598,150 +617,138 @@ a {
     line-height: 1.4;
 }
 
+/* Dynamic Island compact presentation: avatar leading, timer trailing in the event color. */
 .island {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 260px;
+    max-width: 230px;
     margin: 0 auto 18px;
-    padding: 8px 10px 8px 8px;
+    padding: 6px 14px 6px 8px;
     border-radius: 999px;
     background: #000;
-    color: #fff;
     font-family: var(--font-round);
-    font-size: 14px;
-    font-weight: 600;
 }
 
 .island .em {
     display: grid;
     place-items: center;
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
-    background: var(--c-purple);
-    font-size: 16px;
+    background: #f4ecfb;
+    font-size: 15px;
 }
 
 .island .t {
-    color: #ffb340;
+    color: var(--c-purple);
+    font-size: 15px;
+    font-weight: 700;
     font-variant-numeric: tabular-nums;
 }
 
-.widgets {
+/* Widgets: 5 columns x 2 rows of small-widget cells, like the Home Screen */
+
+.widgets-card {
+    text-align: center;
+}
+
+.widgets-card p {
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.widget-board {
+    container-type: inline-size;
+    margin-top: 32px;
+    padding: 36px;
+    border-radius: calc(var(--radius) - 8px);
+    background:
+        radial-gradient(circle at 15% 20%, var(--blob-blue), transparent 55%),
+        radial-gradient(circle at 85% 80%, var(--blob-pink), transparent 55%),
+        var(--surface-2);
+}
+
+.widget-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+        "list list event event esmall"
+        "list list progress progress psmall";
+    gap: 2.39cqw;
 }
 
-.widget {
-    aspect-ratio: 1;
-    min-width: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    padding: 14px;
-    border-radius: 22px;
-    background: var(--surface-2);
-    display: flex;
-    flex-direction: column;
-    font-family: var(--font-round);
-}
-
-.widget .w-emoji {
-    display: grid;
-    place-items: center;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: var(--blob-pink);
-    font-size: 18px;
-}
-
-.widget .w-title {
-    margin-top: auto;
-    font-weight: 700;
-    font-size: 14px;
-}
-
-.widget .w-sub {
-    font-size: 11px;
-    color: var(--text-3);
-}
-
-.widget .w-num {
-    font-size: 30px;
-    font-weight: 800;
-    line-height: 1.1;
-    color: var(--c-pink);
-}
-
-.widget .w-num small {
-    font-size: 13px;
-    margin-left: 2px;
-}
-
-.widget .w-label {
-    font-size: 11px;
-    color: var(--text-3);
-    font-weight: 600;
-}
-
-.widget .w-day {
-    font-size: 20px;
-    font-weight: 800;
-    line-height: 1.2;
-}
-
-.widget .w-row {
-    display: flex;
-    justify-content: space-between;
-    margin-top: auto;
-    font-size: 12px;
-    font-weight: 700;
-}
-
-.widget .w-row span:last-child {
-    color: var(--accent);
-}
-
-.bar {
-    height: 8px;
-    margin-top: 6px;
-    border-radius: 99px;
-    background: var(--line);
-    overflow: hidden;
-}
-
-.bar i {
+.widget-grid img {
     display: block;
-    height: 100%;
-    width: 65%;
-    border-radius: inherit;
-    background: var(--accent);
+    width: 100%;
+    height: auto;
+    border-radius: 3.16cqw;
+    box-shadow: 0 10px 30px rgba(20, 40, 60, 0.12);
 }
 
-.icons {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+.w-list-large {
+    grid-area: list;
 }
 
-.icons img {
-    width: 52px;
-    height: 52px;
-    border-radius: 12px;
+.w-event-medium {
+    grid-area: event;
+}
+
+.w-progress-medium {
+    grid-area: progress;
+}
+
+.w-event-small {
+    grid-area: esmall;
+}
+
+.w-progress-small {
+    grid-area: psmall;
+}
+
+@media (max-width: 960px) {
+    .span-6 {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 680px) {
+    .span-6 {
+        grid-column: auto;
+    }
+
+    .widget-board {
+        padding: 20px;
+    }
+
+    .widget-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "list list"
+            "event event"
+            "esmall psmall"
+            "progress progress";
+        gap: 6.19cqw;
+    }
+
+    .widget-grid img {
+        border-radius: 8.2cqw;
+    }
 }
 
 .swatches {
     display: flex;
+    align-items: center;
     gap: 8px;
-    margin-top: 16px;
+    height: 44px;
+    margin-bottom: 18px;
 }
 
 .swatches i {
-    width: 26px;
-    height: 26px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     border: 3px solid var(--surface);
     box-shadow: 0 0 0 1px var(--line);
