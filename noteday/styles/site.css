@@ -210,6 +210,29 @@ a {
     background: var(--blob-green);
 }
 
+@media (max-width: 640px) {
+    .blob.blue {
+        width: 260px;
+        height: 260px;
+        top: -100px;
+        left: -120px;
+    }
+
+    .blob.pink {
+        width: 220px;
+        height: 220px;
+        top: 320px;
+        right: -120px;
+    }
+
+    .blob.green {
+        width: 64px;
+        height: 64px;
+        top: 500px;
+        left: 12px;
+    }
+}
+
 .app-icon {
     width: 88px;
     height: 88px;
@@ -834,6 +857,22 @@ a {
     top: auto;
     bottom: -160px;
     right: -60px;
+}
+
+@media (max-width: 640px) {
+    .cta .blob.blue {
+        width: 220px;
+        height: 220px;
+        top: -110px;
+        left: -80px;
+    }
+
+    .cta .blob.pink {
+        width: 190px;
+        height: 190px;
+        bottom: -100px;
+        right: -60px;
+    }
 }
 
 .cta h2 {
