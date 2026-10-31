@@ -5,10 +5,10 @@
     --surface-2: #eef2f6;
     --text: #1c2430;
     --text-2: #5f6f80;
-    --text-3: #8a98a8;
+    --text-3: #647386;
     --line: rgba(28, 36, 48, 0.08);
     --accent: #00a9e8;
-    --accent-ink: #0088bd;
+    --accent-ink: #0079a8;
     --blob-blue: #d6f1fb;
     --blob-pink: #fbe1e7;
     --blob-green: #ddf3e6;
@@ -64,6 +64,15 @@ body {
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
     overflow-x: clip;
+}
+
+picture {
+    display: contents;
+}
+
+/* Keep <source> out of grid layouts once <picture> no longer has a box. */
+picture > source {
+    display: none;
 }
 
 img {
@@ -138,10 +147,6 @@ a {
 .nav-links a:hover {
     color: var(--text);
     background: var(--surface-2);
-}
-
-.nav-links .lang {
-    border: 1px solid var(--line);
 }
 
 .nav-links .get {
@@ -273,11 +278,18 @@ a {
 .badge {
     display: inline-block;
     margin-top: 34px;
-    transition: transform 0.2s;
+    transition: opacity 0.2s;
 }
 
+/* Apple badge guidelines: don't modify, angle or animate the badge. */
 .badge:hover {
-    transform: translateY(-2px);
+    opacity: 0.8;
+}
+
+.badge:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+    border-radius: 10px;
 }
 
 .badge img {
@@ -309,7 +321,7 @@ a {
     width: 72px;
     height: 72px;
     border-radius: 50%;
-    border: 5px solid #fff;
+    border: 5px solid var(--surface);
     font-size: 34px;
     line-height: 1;
     box-shadow: 0 14px 30px rgba(28, 36, 48, 0.14);
@@ -391,24 +403,25 @@ a {
         font-size: 22px;
     }
 
-    .chip.c1 {
-        left: -12%;
-    }
-
-    .chip.c2 {
-        left: -8%;
-    }
-
+    /* Keep only three chips on small screens and pin them inside the viewport. */
+    .chip.c2,
     .chip.c3 {
-        left: -10%;
+        display: none;
+    }
+
+    .chip.c1 {
+        top: 12%;
+        left: max(calc((min(340px, 78vw) - 100vw) / 2 + 8px), -84px);
     }
 
     .chip.c4 {
-        right: -10%;
+        top: 30%;
+        right: max(calc((min(340px, 78vw) - 100vw) / 2 + 8px), -76px);
     }
 
     .chip.c5 {
-        right: -12%;
+        top: 58%;
+        right: max(calc((min(340px, 78vw) - 100vw) / 2 + 8px), -84px);
     }
 }
 
@@ -430,6 +443,11 @@ a {
     font-weight: 600;
     color: var(--accent-ink);
     letter-spacing: 0.02em;
+}
+
+/* Beat `.section-head p`, which would otherwise turn the eyebrow gray. */
+.section-head .eyebrow {
+    color: var(--accent-ink);
 }
 
 .section-head h2 {
@@ -919,6 +937,13 @@ a {
 
 .footer a:hover {
     color: var(--text);
+}
+
+.footer .legal {
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 1.5;
 }
 
 /* Reveal on scroll */
